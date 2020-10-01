@@ -18,8 +18,10 @@ class File:
 
     @staticmethod
     def read(filePath):
-        fileContent = open(filePath, 'r')
-        print(fileContent.read())
+        file_handle = open(filePath, 'r')
+        fileContent = file_handle.read()
+        file_handle.close()
+        print(fileContent)
 
 
 File.read('exercise1.py')
