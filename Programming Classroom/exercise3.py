@@ -37,9 +37,22 @@ class Calculator:
     def divide(num1, num2):
         quo = format((num1 / num2), '.2f')
         return quo
+    
+    @staticmethod
+    def int_divide(num1, num2):
+        int_quo = num1 // num2
+        return int_quo
+    
+    @staticmethod
+    def remainder(num1, num2):
+        rem = num1 % num2
+        return rem
 
 
 print(f'Sum is {Calculator.add(10,50)}')
 print(f'Difference is {Calculator.subtract(50, 30)}')
 print(f'Product is {Calculator.multiply(1,0)}')
 print(f'Division equals {Calculator.divide(10,3)}')
+print(f'Integer Division equals {Calculator.int_divide(10,3)}')
+print(f'Remainder equals {Calculator.remainder(10,3)}')
+
